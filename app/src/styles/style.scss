@@ -1,0 +1,29 @@
+@use 'reset';
+
+body {
+  font-family: 'Arial',sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+}
+footer {
+  margin-top: auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: .8rem;
+
+  [type='submit']{
+    cursor: pointer;
+    width: max-content;
+    margin: 0 auto;
+  }
+}

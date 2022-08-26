@@ -1,0 +1,16 @@
+{% import "./components/macro/forms.njk" as forms %}
+{% extends "./partials/layout.njk" %}
+
+{% block content %}
+  <h2>Hello, {{'world!'}}</h2>
+  <form action="/about.html" method="GET" >
+    {{forms.field('first_name','','text','who is your name?')}}
+    <button type="submit">Go</button>
+  </form>
+{% endblock %}
+
+{% block js %}
+  <script>
+    console.log('this is index')
+  </script>
+{% endblock %}

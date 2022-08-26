@@ -22,10 +22,18 @@ yarn dev
 ```
 yarn build
 ```
-### serve dist directory
-```
-npm install --global serve
-serve dist
-```
-### start coding from ./src/templates/ 
-no need to touch ./src/html/
+### start coding from /app/src/templates/ 
+no need to touch /app/src/html/
+
+### if something went wrong
+try `rm -rf .parcel-cache` and re-run previous command
+
+## helpers
+- "Nunjucks VSCode Extension Pack" by douglaszaltron
+- add into settings.json   
+  ```
+  "emmet.includeLanguages": {
+    "nunjucks": "html",`
+    "njk": "html"
+  }
+  ```

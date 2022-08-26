@@ -1,36 +1,12 @@
 {
-  "name": "parcel-nunjucks",
-  "version": "1.0.0",
-  "description": "parcel with nunjucks boilerplate",
-  "repository": "https://github.com/alcoffeeocha/parcel-nunjucks.git",
-  "author": "alcoffeeocha <muhammad.alkahfi@sac.id>",
-  "source": "src/html/index.html",
-  "watch": {
-    "build:html": {
-      "patterns": [
-        "src",
-        "test"
-      ],
-      "extensions": "njk",
-      "runOnChangeOnly": true
-    }
-  },
+  "private": "true",
+  "workspaces": [
+    "app",
+    "parcel-namer-no-hash"
+  ],
   "scripts": {
-    "dev": "run-p run:parcel watch:nunjucks",
-    "run:parcel": "parcel 'src/html/*.html' --port 3000 --open",
-    "build:html": "nunjucks-to-html --baseDir src/templates --dest src/html/",
-    "build:parcel": "parcel build 'src/html/*.html' --no-source-maps --no-optimize",
-    "build": "run-s clean build:html build:parcel",
-    "watch:nunjucks": "npm-watch",
-    "clean": "rm -rf dist"
-  },
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.7.0",
-    "npm-run-all": "^4.1.5",
-    "npm-watch": "^0.11.0",
-    "nunjucks": "^3.2.3",
-    "nunjucks-to-html": "^1.1.0",
-    "parcel": "^2.7.0"
+    "dev":"yarn app dev",
+    "build": "yarn app build",
+    "app": "yarn workspace app"
   }
 }
